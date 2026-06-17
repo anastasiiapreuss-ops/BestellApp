@@ -1,0 +1,29 @@
+header {
+    background-color: rgb(111 82 57);
+    width: 100%;
+    height: 50px;
+    padding: 50px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-footer-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header img {
+    width: 34px;
+    height: 34px;
+}
+
+header p {
+    font-size: 16px;
+    color: antiquewhite;
+}
+
+.app_text_style {
+    font-size: 20px;
+}

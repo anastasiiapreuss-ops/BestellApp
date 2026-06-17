@@ -1,0 +1,22 @@
+footer{
+    background-color: rgb(111 82 57);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 70px;
+    color: white;
+    padding: 50px 120px;
+    font-size: 20px;
+}
+
+.left_footer-side{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.left_footer-side img{
+    width: 20px;
+}

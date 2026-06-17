@@ -1,0 +1,76 @@
+.claude-monet-img-style {
+    width: 1440px;
+    min-width: 1440px;
+    max-width: 1440px;
+    height: 600px;
+    ;
+    object-fit: cover;
+}
+
+.main_style {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.claude-monet-icon {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin-top: -100px;
+    background-color: beige;
+    border-radius: 50%;
+}
+
+.main_text_style {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+h1{
+    font-size: 48px;
+    color: rgb(112 65 26);
+}
+.main_text_style p{
+    font-size: 24px;
+}
+.top_text_style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.top_text_style img{
+    width: 24px;
+    object-fit: cover;
+}
+
+.evaluation_style{
+    background-color: rgb(149 112 81 / 70%);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 8px;
+}
+
+.five_style{
+    font-size: 16px boild;
+}
+
+.our_menu_style{
+    background-color: rgb(127 94 66);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 150px;
+    align-items: center;
+    margin-top: 80px;
+    gap: 15px;
+    color:white;
+}
