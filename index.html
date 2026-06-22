@@ -11,7 +11,7 @@
     <title>BestellApp</title>
 </head>
 
-<body>
+<body onload="init()">
 
     <header>
         <div class="left-footer-side">
@@ -55,8 +55,8 @@
         <section class="content_style">
 
             <section id="menu">
-                
-               
+
+
             </section>
 
             <aside id="shopping-cart" class="shopping_cart_style">
@@ -66,15 +66,21 @@
 
                 </section>
                 <section class="sum_style">
-                    <p>Zwischensumme</p>
-                    <p>Lieferkosten</p>
+                    <p class="total_style"><span>Zwischensumme:</span> <span id="sub-total-price">0,00 €</span></p>
+                    <p class="total_style" id = "delivery">Lieferkosten: <span>10,99 €</span></p>
                     <hr>
-                    <p><span class="sum_p_style">Gesamtbetrag</span></p>
+                    <p class="total_style" id="sum-total">
+                        <span class="sum_p_style">Gesamtbetrag:</span>
+                        <span id="total-price">0,00 €</span>
+                    </p>
                 </section>
-                <button class="buy_button">Jetzt bezahlen</button>
+                <button onclick="buyNow()" id="total-price-button"class="buy_button">Jetzt bezahlen (0,00€)</button>
             </aside>
 
         </section>
+        <dialog closedby="any" id="dialog-input">
+          
+        </dialog>
 
     </main>
 
@@ -88,9 +94,8 @@
         <p>Cookie Preferences</p>
     </footer>
 
-    <script src="tempalte.js"></script>
-    <script src="script.js"></script>
-
 </body>
+<script src="tempalte.js"></script>
+<script src="script.js"></script>
 
 </html>

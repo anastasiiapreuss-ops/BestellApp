@@ -5,11 +5,38 @@ function getTemplateDishes (i){
                     <section class = "dishes_text_style">
                         <div class = "top_text_content">
                             <h3>${dishes[i].name}</h3>
-                            <p>${dishes[i].price} €</p>
+                            <p>${dishes[i].price.toFixed(2).replace(".", ",")} €</p>
                         </div>
                         <p>${dishes[i].ingredients}</p>
-                        <button onclick = "addDishes()" class = "add_button_style">Hinzufügen</button>
+                        <button onclick = "addDishes(${i})" class = "add_button_style">Hinzufügen</button>
                     </section>
         </section>`;
 }
    
+function getCartTemplate (key){
+    return `
+   <section class="cart_style">
+        <p>${shoppingCart[key]} x ${dishes[key].name}</p>
+        <section class="cart_style_content"> 
+            <section class="cart_style_button">
+                <button onclick="changeAmount(${key}, -1)">-</button>
+                    ${shoppingCart[key]}
+                <button onclick="changeAmount(${key}, +1)">+</button>
+            </section> 
+                <p>${(shoppingCart[key] * dishes[key].price).toFixed(2).replace(".", ",")}€</p>
+        </section>
+    </section>
+    `
+   
+}
+
+function getDialogTemplate(){
+    return`
+    <section class = "dialog_style">
+    <button class ="x_button" onclick ="closeAllDialoge()">x</button>
+      <img src="./assets/icons/food-truck-icon.png" alt="Food Truck icon">
+        <h3>Bestellung bestätigt!</h3>
+        <p>Ihr Essen ist auf dem Weg</p>
+    </section>
+    `
+}

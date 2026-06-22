@@ -1,8 +1,8 @@
 header {
     background-color: rgb(111 82 57);
     width: 100%;
-    height: 50px;
-    padding: 50px 120px;
+    height: 3.13rem;
+    padding: 3.13rem 7.50rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,15 +15,28 @@ header {
 }
 
 header img {
-    width: 34px;
-    height: 34px;
+    width: 2.13rem;
+    height: 2.13rem;
 }
 
 header p {
-    font-size: 16px;
+    font-size: 1rem;
     color: antiquewhite;
 }
 
 .app_text_style {
-    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {}
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding: 50px max(50px, calc(50% - 720px));
+    }
+
 }

@@ -37,24 +37,89 @@ const dishes = [
   }
 ];
 
-let shoppingCard = {};
 
-function renderDishes(){
-    const renderDishesRef = document.getElementById('menu');
-    renderDishesRef.innerHTML = "";
-    for (let i = 0; i < dishes.length; i ++){
-        renderDishesRef.innerHTML += getTemplateDishes(i)
-    }
+
+let shoppingCart = {};
+let subtotal = 0;
+let total = 0;
+
+function init() {
+  renderDishes();
+  renderCart();
 }
 
-renderDishes();
+function renderDishes() {
+  const renderDishesRef = document.getElementById('menu');
+  renderDishesRef.innerHTML = "";
+  for (let i = 0; i < dishes.length; i++) {
+    renderDishesRef.innerHTML += getTemplateDishes(i)
+  }
+}
 
-// function addDishes(gericht){
-//     if(!( in shoppingCard)){
-//         shoppingCard[] = 1;
-//     }else{
-//         shoppingCard[] += 1;
-//     }
-//     console.log( + shoppingCard[]);
-    
-// }
+
+
+function addDishes(i) {
+  if (!([i] in shoppingCart)) {
+    shoppingCart[i] = 1;
+  } else {
+    shoppingCart[i] += 1;
+  }
+  calculateSum()
+  renderCart();
+}
+
+function renderCart() {
+  subtotal = 0;
+  total = 0;
+  const renderCartRef = document.getElementById('shopping-cart-content')
+  renderCartRef.innerHTML = "";
+  let keys = Object.keys(shoppingCart);
+  for (let j = 0; j < keys.length; j++) {
+    let key = keys[j];
+    renderCartRef.innerHTML += getCartTemplate(key);
+  }
+}
+
+function calculateSum() {
+  let keys = Object.keys(shoppingCart);
+  for (let j = 0; j < keys.length; j++) {
+    let key = keys[j];
+    subtotal += shoppingCart[key] * dishes[key].price;
+    total = 10.99 + subtotal;
+  }
+  document.getElementById('sub-total-price').innerHTML = subtotal.toFixed(2).replace(".", ",")+ " €";
+  document.getElementById('total-price').innerHTML = total.toFixed(2).replace(".", ",") + " €";
+  document.getElementById('total-price-button').innerHTML = "Jetzt bezahlen (" + total.toFixed(2).replace(".", ",") + "€)";
+}
+
+function changeAmount(key, value) {
+  shoppingCart[key] += value;
+  if (shoppingCart[key] <= 0) {
+    delete shoppingCart[key];
+  }
+  calculateSum();
+  renderCart();
+}
+
+function openDialoge() {
+  const dialogRef = document.getElementById('dialog-input');
+  dialogRef.innerHTML = getDialogTemplate();
+  dialogRef.showModal();
+}
+
+function buyNow() {
+  document.getElementById('shopping-cart')
+    .classList.add('shopping_cart_style_hidden');
+
+  openDialoge();
+}
+
+function closeAllDialoge() {
+  const dialogRef = document.getElementById('dialog-input');
+  const cart = document.getElementById('shopping-cart');
+  cart.classList.remove('shopping_cart_style_hidden');
+  shoppingCart = {};
+  renderCart();
+  calculateSum();
+  dialogRef.close();
+}
