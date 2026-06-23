@@ -59,10 +59,15 @@ function renderDishes() {
 
 
 function addDishes(i) {
+  let addButtonRef;
   if (!([i] in shoppingCart)) {
     shoppingCart[i] = 1;
+    addButtonRef = document.getElementById(`active-button${i}`).innerHTML = `Hinzugefügt`;
+    addButtonRef = document.getElementById(`active-button${i}`).classList.add("added_button_style");
   } else {
     shoppingCart[i] += 1;
+    addButtonRef = document.getElementById(`active-button${i}`).innerHTML = `Hinzugefügt`;
+    addButtonRef = document.getElementById(`active-button${i}`).classList.add("added_button_style");
   }
   calculateSum()
   renderCart();
@@ -81,21 +86,27 @@ function renderCart() {
 }
 
 function calculateSum() {
+  let amount = 0;
   let keys = Object.keys(shoppingCart);
   for (let j = 0; j < keys.length; j++) {
     let key = keys[j];
     subtotal += shoppingCart[key] * dishes[key].price;
     total = 10.99 + subtotal;
+    amount += shoppingCart[key];
   }
-  document.getElementById('sub-total-price').innerHTML = subtotal.toFixed(2).replace(".", ",")+ " €";
+  document.getElementById('sub-total-price').innerHTML = subtotal.toFixed(2).replace(".", ",") + " €";
   document.getElementById('total-price').innerHTML = total.toFixed(2).replace(".", ",") + " €";
   document.getElementById('total-price-button').innerHTML = "Jetzt bezahlen (" + total.toFixed(2).replace(".", ",") + "€)";
+  document.getElementById('cart-amount').innerHTML = amount;
 }
 
 function changeAmount(key, value) {
+  let addButtonRef = document.getElementById(`active-button${key}`)
   shoppingCart[key] += value;
   if (shoppingCart[key] <= 0) {
     delete shoppingCart[key];
+    addButtonRef.innerHTML = "Hinzufügen";
+    addButtonRef.classList.remove("added_button_style");
   }
   calculateSum();
   renderCart();
@@ -108,8 +119,9 @@ function openDialoge() {
 }
 
 function buyNow() {
-  document.getElementById('shopping-cart')
-    .classList.add('shopping_cart_style_hidden');
+  const buyNowRef =document.getElementById('shopping-cart')
+    buyNowRef.classList.add('shopping_cart_style_hidden');
+    buyNowRef.classList.remove("shopping_cart_mobile");
 
   openDialoge();
 }
@@ -117,9 +129,26 @@ function buyNow() {
 function closeAllDialoge() {
   const dialogRef = document.getElementById('dialog-input');
   const cart = document.getElementById('shopping-cart');
-  cart.classList.remove('shopping_cart_style_hidden');
+  cart.classList.remove("shopping_cart_mobile");
+
   shoppingCart = {};
   renderCart();
   calculateSum();
+  resetAddButtons();
   dialogRef.close();
+}
+
+function resetAddButtons() {
+
+  for (let i = 0; i < dishes.length; i++) {
+    let resetButtonRef = document.getElementById(`active-button${i}`);
+    resetButtonRef.innerHTML = "Hinzufügen";
+    resetButtonRef.classList.remove("added_button_style");
+
+  }
+}
+
+function mobileShoppingCart() {
+  const cartRef = document.getElementById('shopping-cart');
+  cartRef.classList.toggle('shopping_cart_mobile');
 }
