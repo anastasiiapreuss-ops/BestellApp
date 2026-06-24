@@ -1,0 +1,111 @@
+.impressum_main {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    min-height: calc(100vh - 12rem);
+}
+
+.impressum_container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.impressum_container h1 {
+    text-align: center;
+    color: rgb(112 65 26);
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.impressum_card {
+    background-color: rgb(141 115 92);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,.25);
+}
+
+.impressum_block {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.impressum_block h2 {
+    color: antiquewhite;
+    font-size: 1.5rem;
+}
+
+.impressum_block p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.back_button {
+    margin-top: 1rem;
+    align-self: center;
+
+    text-decoration: none;
+
+    background-color: rgb(62 37 19);
+    color: white;
+
+    padding: .9rem 2rem;
+
+    border-radius: 2rem;
+
+    transition: .3s;
+}
+
+.back_button:hover {
+    background-color: rgb(149 112 81);
+}
+
+@media (max-width:768px){
+
+    .impressum_main{
+        padding:2rem 1rem;
+    }
+
+    .impressum_card{
+        padding:1.5rem;
+    }
+
+    .impressum_container h1{
+        font-size:2.3rem;
+    }
+
+    .impressum_block h2{
+        font-size:1.3rem;
+    }
+
+    .impressum_block p{
+        font-size:1rem;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .impressum_main{
+        padding:1.5rem .8rem;
+    }
+
+    .impressum_card{
+        padding:1.2rem;
+        gap:1.5rem;
+    }
+
+    .impressum_container h1{
+        font-size:2rem;
+    }
+
+    .back_button{
+        width:100%;
+        text-align:center;
+    }
+
+}

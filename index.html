@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="impressum.css">
     <link rel="stylesheet" href="headercontent.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
@@ -18,11 +19,10 @@
             <img src="./assets/icons/takeout_dining_2.png" alt="BestellApp icon">
             <p>Bestell<br><span class="app_text_style">APP</span></p>
         </div>
-        <img src="./assets/icons/dehaze.png" alt="menu icon">
+        <img class="menu_header_icon" src="./assets/icons/dehaze.png" alt="menu icon">
     </header>
 
     <main>
-
         <section class="main_style">
             <img class="claude-monet-img-style" src="./assets/img/claude-monter-background-img.webp"
                 alt="Claude Monet Restaurant">
@@ -35,12 +35,11 @@
 
                     <p class="evaluation_style">
                         <img src="./assets/icons/star.png" alt="star-icon">
-                        <span class="five_style">5,0</span>
-                        (10.570)
+                        <span class="five_style">5,0</span><span class="bracket_style">(10.570)</span>
                     </p>
                 </section>
 
-                <p>
+                <p class="restaurant_p">
                     Sterne-gekrönte französische Kochkunst,
                     die Tradition und moderne Raffinesse perfekt vereint
                 </p>
@@ -49,8 +48,8 @@
 
         <section class="our_menu_style">
             <div class="menu_icon_p_style">
-            <img src="./assets/icons/icons8-restaurant-menü-100.png" alt="our-menu-icon">
-            <h2>UNSER MENÜ</h2>
+                <img src="./assets/icons/icons8-restaurant-menü-100.png" alt="our-menu-icon">
+                <h2>UNSER MENÜ</h2>
             </div>
         </section>
 
@@ -62,6 +61,8 @@
             </section>
 
             <aside id="shopping-cart" class="shopping_cart_style">
+                <button onclick="mobileShoppingCart()" class="close_cart_button">x
+                </button>
                 <h2>Ihr Warenkorb</h2>
 
                 <section id="shopping-cart-content">
@@ -69,25 +70,27 @@
                 </section>
                 <section class="sum_style">
                     <p class="total_style"><span>Zwischensumme:</span> <span id="sub-total-price">0,00 €</span></p>
-                    <p class="total_style" id = "delivery">Lieferkosten: <span>10,99 €</span></p>
+                    <p class="total_style" id="delivery">Lieferkosten: <span>10,99 €</span></p>
                     <hr>
                     <p class="total_style" id="sum-total">
                         <span class="sum_p_style">Gesamtbetrag:</span>
                         <span id="total-price">0,00 €</span>
                     </p>
                 </section>
-                <button onclick="buyNow()" id="total-price-button"class="buy_button">Jetzt bezahlen (0,00€)</button>
+                <button onclick="buyNow()" id="total-price-button" class="buy_button">Jetzt bezahlen (0,00€)</button>
             </aside>
 
         </section>
         <dialog closedby="any" id="dialog-input">
-          
+
         </dialog>
         <section class="nav_bar_style">
-            <button class="nav_button"><img src="./assets/icons/Home.svg" alt="Home Icon"></button>
+            <button class="nav_button"><img src="./assets/icons/home (1).svg" alt="Home Icon"></button>
             <button class="nav_button"><img src="./assets/icons/person.svg" alt="Person Icon"></button>
             <button class="nav_button"><img src="./assets/icons/takeout_dining_2.png" alt="BestellApp Icon"></button>
-            <button onclick="mobileShoppingCart()" class="nav_button"><img src="./assets/icons/shopping_cart (1).svg" alt="Warenkorb Icon"><span id="cart-amount" class="cart_badge">0</span></button>
+            <button onclick="mobileShoppingCart()" class="nav_button"><img id="cart-button"
+                    src="./assets/icons/shopping_cart (1).svg" alt="Warenkorb Icon"><span id="cart-amount"
+                    class="cart_badge">0</span></button>
         </section>
 
     </main>
@@ -98,7 +101,7 @@
             <p>2026 CLAUDE MONET</p>
         </section>
 
-        <p>Imprint</p>
+        <a href="./impressum.html">Imprint</a>
         <p>Cookie Preferences</p>
     </footer>
 
