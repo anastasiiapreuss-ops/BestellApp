@@ -70,19 +70,29 @@ function addDishes(i) {
 }
 
 function renderCart() {
-    subtotal = 0;
-    total = 0;
-    const renderCartRef = document.getElementById('shopping-cart-content')
-    renderCartRef.innerHTML = "";
-    let keys = Object.keys(shoppingCart);
-    if (keys.length === 0) {
-        renderCartRef.innerHTML = getEmptyCartTemplate();
-        return;
-    }
-    for (let j = 0; j < keys.length; j++) {
-        let key = keys[j];
-        renderCartRef.innerHTML += getCartTemplate(key);
-    }
+  subtotal = 0;
+  total = 0;
+  const renderCartRef = document.getElementById("shopping-cart-content");
+  renderCartRef.innerHTML = "";
+  let keys = Object.keys(shoppingCart);
+  if (showEmptyCart(keys, renderCartRef)) return;
+  for (let j = 0; j < keys.length; j++) {
+    renderCartRef.innerHTML += getCartTemplate(keys[j]);
+  }
+}
+
+function showEmptyCart(keys, renderCartRef) {
+  const sumRef = document.querySelector(".sum_style");
+  const buttonRef = document.getElementById("total-price-button");
+  if (keys.length === 0) {
+    renderCartRef.innerHTML = getEmptyCartTemplate();
+    sumRef.style.display = "none";
+    buttonRef.style.display = "none";
+    return true;
+  }
+  sumRef.style.display = "flex";
+  buttonRef.style.display = "block";
+  return false;
 }
 
 function calculateSum() {
