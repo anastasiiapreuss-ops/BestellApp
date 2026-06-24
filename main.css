@@ -226,6 +226,7 @@ h1 {
     font-family: 'Palanquin';
     font-style: normal;
     font-weight: 600;
+    border: none;
 }
 
 hr {
@@ -452,6 +453,7 @@ hr {
     .add_button_style {
         margin-top: 0.6rem;
         margin-bottom: 0px;
+        font-size: 0.8rem;
     }
 
     h1 {
@@ -486,6 +488,11 @@ hr {
         height: 15rem;
     }
 
+    .cart_style>p {
+        font-size: 1.1rem;
+        padding: 0.25rem;
+    }
+
     .top_text_content {
         flex-direction: row;
         align-items: center;
@@ -495,9 +502,17 @@ hr {
     }
 
     .name_dishes_style h3 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 2rem;
+    }
+
+    .name_dishes_style p {
+        font-size: 1rem;
+    }
+
+    .top_text_content p {
+        font-size: 1.2rem;
     }
 
     .shopping_cart_style {
@@ -509,12 +524,31 @@ hr {
         flex-direction: column;
         position: fixed;
         left: 0;
-        top: 400px;
+        top: 250px;
         width: 100%;
         height: 60vh;
         background-color: rgb(38 27 20);
         border-radius: 1.25rem 1.25rem 0 0;
         z-index: 999
+    }
+
+    .shopping_cart_style h2 {
+
+        font-size: 1.3rem;
+        margin-top: 2.4rem;
+        margin-bottom: 1.0rem;
+
+    }
+
+    .cart_style {
+        width: 80%;
+        height: 5.12rem;
+        border-radius: 0.5rem;
+    }
+
+    .cart_style_content {
+        font-size: 1.1rem;
+        padding: 0.25rem;
     }
 
     .nav_bar_style {
@@ -531,8 +565,8 @@ hr {
     }
 
     .nav_bar_style img {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .nav_button:hover {
@@ -550,8 +584,11 @@ hr {
     }
 
     .buy_button {
-        padding: 0.6rem;
+        padding: 0.5rem;
         line-height: 1.5rem;
+        font-size: 1.2rem;
+        border: none;
+        margin-bottom: 1rem;
     }
 
     .nav_button {
@@ -577,10 +614,16 @@ hr {
         font-weight: bold;
     }
 
-    .cart_style {
-        width: 80%;
-
+    .sum_style {
+        margin: 0.63rem 0.63rem 0.1rem 0.63rem;
+        color: white;
+        font-size: 1.0rem;
     }
+
+    .sum_p_style {
+        font-size: 1.1rem;
+    }
+
 
     .restaurant_p {
         padding: 1rem 4rem;
@@ -593,9 +636,12 @@ hr {
 
 
     .x_button {
-        margin-right: -12rem;
+        margin-right: -18rem;
+        font-size: 1.2rem;
     }
-
+    .dialog_style{
+        font-size: 1rem;
+    }
     .top_text_style {
         flex-direction: column-reverse;
         gap: 3rem;
@@ -603,26 +649,19 @@ hr {
 
     .close_cart_button {
         display: flex;
-
         position: absolute;
         top: 1rem;
         right: 1rem;
-
         justify-content: center;
         align-items: center;
-
-        width: 2.2rem;
-        height: 2.2rem;
-
+        width: 1.2rem;
+        height: 1.2rem;
         border: none;
         border-radius: 50%;
-
         background-color: transparent;
         color: white;
-
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         cursor: pointer;
-
         transition: 0.3s;
     }
 
@@ -664,6 +703,12 @@ hr {
         height: 1.4rem;
     }
 
+    .add_button_style {
+        margin-top: 0.6rem;
+        margin-bottom: 0px;
+        font-size: 0.8rem;
+    }
+
 
     header img {
         width: 2.5rem;
@@ -674,13 +719,33 @@ hr {
         display: none;
     }
 
+    .menu_icon_p_style {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
     .our_menu_style {
         padding: 0rem 5rem;
+    }
+
+    .cart_style>p {
+        font-size: 1.1rem;
+        padding: 0.25rem;
     }
 
     .add_button_style {
         margin-top: 0.6rem;
         margin-bottom: 0px;
+    }
+
+    .name_dishes_style p {
+        font-size: 1rem;
+    }
+
+    .name_dishes_style h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 
     .dishes_style {
@@ -704,9 +769,39 @@ hr {
         margin-top: 0.4rem;
     }
 
+    .shopping_cart_style h2 {
+
+        font-size: 1.3rem;
+        margin-top: 2.4rem;
+        margin-bottom: 1.0rem;
+
+    }
 
     .shopping_cart_style {
         display: none;
+    }
+
+    .cart_style_content {
+        font-size: 1.1rem;
+        padding: 0.25rem;
+    }
+
+    .sum_style {
+        margin: 0.63rem 0.63rem 0.1rem 0.63rem;
+        color: white;
+        font-size: 1.0rem;
+    }
+
+    .sum_p_style {
+        font-size: 1.1rem;
+    }
+
+    .buy_button {
+        padding: 0.5rem;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+        border: none;
+        margin-bottom: 1rem;
     }
 
     .shopping_cart_mobile {
@@ -714,7 +809,7 @@ hr {
         flex-direction: column;
         position: fixed;
         left: 0;
-        top: 400px;
+        top: 15.7rem;
         width: 100%;
         height: 60vh;
         background-color: rgb(38 27 20);
@@ -731,13 +826,13 @@ hr {
         justify-content: space-between;
         align-items: center;
         background-color: rgb(58 45 35);
-        padding: 1.25rem 3.1rem;
+        padding: 1.1rem 2.1rem;
         z-index: 1000;
     }
 
     .nav_bar_style img {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .nav_button:hover {
@@ -783,6 +878,7 @@ hr {
 
     .cart_style {
         width: 80%;
+        border-radius: 0.6rem;
     }
 
     .restaurant_p {
@@ -794,29 +890,30 @@ hr {
         flex-direction: column-reverse;
         gap: 3rem;
     }
-     .close_cart_button {
-        display: flex;
 
+    .close_cart_button {
+        display: flex;
         position: absolute;
         top: 1rem;
         right: 1rem;
-
         justify-content: center;
         align-items: center;
-
-        width: 2.2rem;
-        height: 2.2rem;
-
+        width: 1.2rem;
+        height: 1.2rem;
         border: none;
         border-radius: 50%;
-
         background-color: transparent;
         color: white;
-
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         cursor: pointer;
-
         transition: 0.3s;
+    }
+     .x_button {
+        margin-right: -22rem;
+        font-size: 1.2rem;
+    }
+    .dialog_style{
+        font-size: 1rem;
     }
 
     .close_cart_button:hover {
@@ -843,8 +940,127 @@ hr {
         padding-bottom: 4rem;
     }
 
+    header {
+        justify-content: flex-start;
+        height: 6rem;
+        padding: 0rem;
+    }
+
+    header p {
+        font-size: 1.25rem;
+    }
+
+    .add_text_style {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .add_button_style {
+        margin-top: 0.6rem;
+        margin-bottom: 0px;
+        font-size: 0.8rem;
+    }
+
+
+    header img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .menu_header_icon {
+        display: none;
+    }
+
+    .menu_icon_p_style {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .our_menu_style {
+        padding: 0rem 5rem;
+    }
+
+    .cart_style>p {
+        font-size: 1.1rem;
+        padding: 0.25rem;
+    }
+
+    .add_button_style {
+        margin-top: 0.6rem;
+        margin-bottom: 0px;
+    }
+
+    .name_dishes_style p {
+        font-size: 1rem;
+    }
+
+    .name_dishes_style h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
+
+    .dishes_style {
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .dishes_text_style {
+        flex-direction: column;
+    }
+
+    .dishes_img_style {
+        width: 98%;
+        height: 15rem;
+    }
+     .x_button {
+        margin-right: -22rem;
+        font-size: 1.2rem;
+    }
+    .dialog_style{
+        font-size: 1rem;
+    }
+
+    .top_text_content {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0.8rem;
+        margin-top: 0.4rem;
+    }
+
+    .shopping_cart_style h2 {
+
+        font-size: 1.3rem;
+        margin-top: 2.4rem;
+        margin-bottom: 1.0rem;
+
+    }
+
     .shopping_cart_style {
         display: none;
+    }
+
+    .cart_style_content {
+        font-size: 1.1rem;
+        padding: 0.25rem;
+    }
+
+    .sum_style {
+        margin: 0.63rem 0.63rem 0.1rem 0.63rem;
+        color: white;
+        font-size: 1.0rem;
+    }
+
+    .sum_p_style {
+        font-size: 1.1rem;
+    }
+
+    .buy_button {
+        padding: 0.5rem;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+        border: none;
+        margin-bottom: 1rem;
     }
 
     .shopping_cart_mobile {
@@ -852,10 +1068,10 @@ hr {
         flex-direction: column;
         position: fixed;
         left: 0;
-        top: 400px;
+        top: 15.7rem;
         width: 100%;
         height: 60vh;
-        background-color:rgb(38 27 20);
+        background-color: rgb(38 27 20);
         border-radius: 1.25rem 1.25rem 0 0;
         z-index: 999
     }
@@ -869,13 +1085,13 @@ hr {
         justify-content: space-between;
         align-items: center;
         background-color: rgb(58 45 35);
-        padding: 1.3rem 5.1rem;
+        padding: 1.1rem 5.1rem;
         z-index: 1000;
     }
 
     .nav_bar_style img {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .nav_button:hover {
@@ -920,40 +1136,79 @@ hr {
     }
 
     .cart_style {
-        width: 41.2rem;
+        width: 80%;
+        border-radius: 0.6rem;
     }
 
     .restaurant_p {
         padding: 1rem 4rem;
         line-height: 2rem;
     }
+
+    .top_text_style {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .close_cart_button {
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        justify-content: center;
+        align-items: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .close_cart_button:hover {
+        background-color: rgb(149 112 81);
+    }
+
+    .close_cart_button:hover {
+        background-color: rgb(149 112 81);
+    }
+
+    footer {
+        padding: 3rem 3rem !important;
+        white-space: nowrap;
+        font-size: 1rem !important;
+        gap: 1rem !important;
+    }
 }
 
 @media screen and (min-width: 1041px) and (max-width: 1280px) {
-    .cart_style {
-        width: 18rem;
-    }
-
-    .dishes_img_style {
-        min-width: 10rem;
-        width: 10rem;
-        height: 9rem;
-    }
-
-    .dishes_style {
-        gap: 1.2rem;
-    }
-
-    .dishes_style {
-        min-height: 9.75rem;
-        height: 9.75rem;
-    }
-
-    @media screen and (min-width: 1440px) {
-        .main_style {
-            padding: 0px max(0px, calc(50% - 720px));
+        .cart_style {
+            width: 18rem;
         }
 
+        .dishes_img_style {
+            min-width: 10rem;
+            width: 10rem;
+            height: 9rem;
+        }
 
+        .dishes_style {
+            gap: 1.2rem;
+        }
+
+        .dishes_style {
+            min-height: 9.75rem;
+            height: 9.75rem;
+        }
+
+        @media screen and (min-width: 1440px) {
+            .main_style {
+                padding: 0px max(0px, calc(50% - 720px));
+            }
+
+
+        }
     }
-}

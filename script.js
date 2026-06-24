@@ -120,8 +120,8 @@ function openDialoge() {
 }
 
 function buyNow() {
-    const buyNowRef = document.getElementById('shopping-cart')
-    buyNowRef.classList.add('shopping_cart_style_hidden');
+    const buyNowRef = document.getElementById('shopping-cart');
+    buyNowRef.classList.add("shopping_cart_style_hidden");
     buyNowRef.classList.remove("shopping_cart_mobile");
     openDialoge();
 }
@@ -129,11 +129,11 @@ function buyNow() {
 function closeAllDialoge() {
     const dialogRef = document.getElementById('dialog-input');
     const cart = document.getElementById('shopping-cart');
-    cart.classList.remove("shopping_cart_mobile");
     shoppingCart = {};
     renderCart();
     calculateSum();
     resetAddButtons();
+    cart.classList.remove("shopping_cart_style_hidden");
     dialogRef.close();
 }
 
