@@ -55,15 +55,15 @@ function renderDishes() {
 }
 
 function addDishes(i) {
-    let addButtonRef;
-    if (!([i] in shoppingCart)) {
+    let addButtonRef = document.getElementById(`active-button${i}`);
+    if (!(i in shoppingCart)) {
         shoppingCart[i] = 1;
-        addButtonRef = document.getElementById(`active-button${i}`).innerHTML = `Hinzugefügt`;
-        addButtonRef = document.getElementById(`active-button${i}`).classList.add("added_button_style");
+        addButtonRef.innerHTML = `Hinzugefügt`;
+        addButtonRef.classList.add("added_button_style");
     } else {
         shoppingCart[i] += 1;
-        addButtonRef = document.getElementById(`active-button${i}`).innerHTML = `Hinzugefügt`;
-        addButtonRef = document.getElementById(`active-button${i}`).classList.add("added_button_style");
+        addButtonRef.innerHTML = `Hinzugefügt`;
+        addButtonRef.classList.add("added_button_style");
     }
     calculateSum()
     renderCart();
